@@ -18,7 +18,7 @@ class Song
   @@all = []
 
   def create_by_name(name)
-    song = self 
+    song = self.new  
     song.name = name 
     @@all << song 
     song  
@@ -30,7 +30,8 @@ class Song
   
   def self.new_by_name
     song = self.new  
-    song.name = 
+    song.name = name
+    song 
   end 
   
   def self.find_by_name 
