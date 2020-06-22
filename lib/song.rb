@@ -22,6 +22,11 @@ def create_by_name(name)
     save 
   end 
   
+  def self.find_by_name 
+    @@all 
+  end 
+  
+  
   def save
     self.class.all << self  
   end 
@@ -34,12 +39,12 @@ def create_by_name(name)
     @@all.clear
   end
   
-  def new_by_name 
+  def self.new_by_name 
     @@all
   end
   
-  def save
-        @@all << self
+  def self.create_by_name 
+        @@all
     end
   end
 end 
