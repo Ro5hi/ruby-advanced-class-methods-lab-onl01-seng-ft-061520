@@ -21,7 +21,7 @@ class Song
     song = self.new  
     song.name = name 
     @@all << song 
-    save   
+    song    
   end 
   
   def self.alphabetical()
