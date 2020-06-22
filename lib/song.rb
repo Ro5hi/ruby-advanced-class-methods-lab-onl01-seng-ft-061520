@@ -17,7 +17,7 @@ class Song
   
   @@all = []
 
-def initialize(name)
+def create_by_name(name)
     @name = name 
     save 
   end 
@@ -34,9 +34,8 @@ def initialize(name)
     @@all.clear
   end
   
-  def self.print_all 
-    @@all.each do |dogs|
-      puts dogs.name
+  def new_by_name 
+    @@all
   end
   
   def save
