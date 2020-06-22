@@ -1,17 +1,3 @@
-# class Song
-#   attr_accessor :name, :artist_name
-#   @@all = []
-
-#   def self.all
-#     @@all
-#   end
-
-#   def save
-#     self.class.all << self
-#   end
-
-# end
-
 class Song 
   attr_accessor :name, :artist_name
   
@@ -45,15 +31,7 @@ class Song
   def self.find_or_create_by_name
     @@all.find(name) || self.create(name) 
   end 
-  
-  def self.new_by_name 
-    @@all
-  end
-  
-  def self.create_by_name 
-        @@all  
-  end       
-  
+ 
   def self.destroy_all() 
     @@all.clear 
   
