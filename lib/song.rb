@@ -39,7 +39,7 @@ class Song
   end 
   
   def self.find_or_create_by_name
-    @@all.find(name) ||  
+    @@all.find(name) || self.new 
   end 
   
   def self.all 
