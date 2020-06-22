@@ -11,11 +11,17 @@ class Song
     self.class.all << self  
   end
   
+  def self.create
+    song = self.new
+    @@all << song
+    song
+  end
+  
   def create_by_name(name)
     song = self.new  
     song.name = name 
     @@all << song 
-    song  
+    save   
   end 
   
   def self.alphabetical()
@@ -29,7 +35,7 @@ class Song
   end 
   
   def self.find_by_name(name)
-    @@all.find{|songs| songs.name == name}
+    @@all.find {|songs| songs.name == name}
   end
   
   def self.find_or_create_by_name
