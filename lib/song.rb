@@ -7,18 +7,16 @@ class Song
     @@all  
   end
   
+  def save
+    self.class.all << self  
+  end
+  
   def create_by_name(name)
     song = self.new  
     song.name = name 
     @@all << song 
     song  
   end 
-  
-   def save
-    self.class.all << self  
-  end
-  
-   
   
   def self.alphabetical()
   @@all.sort_by{|songs| songs.name}
