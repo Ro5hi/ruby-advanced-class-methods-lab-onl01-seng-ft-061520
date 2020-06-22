@@ -53,9 +53,12 @@ class Song
   end
   
   def self.create_by_name 
-        @@all  def self.clear_all
+        @@all  
+  end       
+  
+  def self.clear_all
     @@all.clear
-  end
+  
     end
   end
 end 
