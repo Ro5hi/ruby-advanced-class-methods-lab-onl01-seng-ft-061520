@@ -2,9 +2,11 @@ class Song
   attr_accessor :name, :artist_name
   
   @@all = []
-def self.all 
+  
+  def self.all 
     @@all  
   end
+  
   def create_by_name(name)
     song = self.new  
     song.name = name 
