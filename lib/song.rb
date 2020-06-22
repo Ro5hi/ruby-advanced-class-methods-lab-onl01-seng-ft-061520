@@ -18,6 +18,7 @@ class Song
   @@all = []
 
   def create_by_name(name)
+    song = self 
     song.name = name 
     @@all << song 
      
