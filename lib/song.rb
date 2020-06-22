@@ -18,7 +18,8 @@ class Song
   @@all = []
 
   def create_by_name(name)
-    @name = name 
+    song.name = name 
+    
     save 
   end 
   
