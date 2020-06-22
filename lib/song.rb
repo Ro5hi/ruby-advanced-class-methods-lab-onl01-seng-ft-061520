@@ -17,12 +17,12 @@ class Song
     song
   end
   
-  def initialize(createname)
-    song = self.new  
-    song.name = name 
-    @@all << song 
-    song    
-  end 
+  def self.create_by_name(name)
+    song = self.new 
+    song.name = name
+    @@all << song
+    song
+  end
   
   def self.alphabetical()
   @@all.sort_by{|songs| songs.name}
